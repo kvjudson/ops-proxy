@@ -1,0 +1,4 @@
+[
+  "/bin/bash /etc/nginx/config.sh",
+  "nginx -g 'daemon off;'"
+]
