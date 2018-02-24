@@ -29,7 +29,7 @@ domainComponent = optional
 basicConstraints = CA:false
 
 [ req ]
-default_bits = 2048
+default_bits = 4096
 default_keyfile = ./opsca-key.pem
 default_md = sha256
 prompt = yes

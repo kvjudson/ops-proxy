@@ -5,12 +5,14 @@ Ops proxy provides access to internal tools. All access is via SSL and controlle
 
 ## Setup
 
-Run the setupssl.sh script in the same directory as the setupssl.sh script with the CN and SUBJECT_DETAIL environment variables set to your needs. An example CN is 'CN=ops-proxy.somecompany.com' and an example SUBJECT_DETAIL is "SUBJECT_DETAIL='C=US/ST=Utah/L=Lehi/O=SomeCompany'". An example command line: "CN=ops-proxy.somecompany.com SUBJECT_DETAIL='C=US/ST=Utah/L=Lehi/O=SomeCompany' ./setupssl.sh"
+Run the setupca.sh script in the same directory as the setupca.sh script.
+
+Run the setupserver.sh script in the same directory as the setupserver.sh script with CN as the only argument. An example CN is 'ops-proxy.somecompany.com'. An example command line: "./setupserver.sh ops-proxy.somecompany.com"
 
 ## Browser cert management
 ### Creating a browser cert
 
-Create a browser by executing the create-client.sh script in the same directory as the create-client.sh script and the client "name" as the only parameter. This will create a directory and then generate certs and p12 file for the brower. On a MAC the p12 file will need to imported into the "Keychain Access" app. Example command lines: './create-client.sh firstname.lastname' and './create-client.sh someone.else'.
+Create a browser cert by executing the create-client.sh script in the same directory as the create-client.sh script and the client "name" as the only parameter. This will create a directory and then generate certs and p12 file for the brower. On a MAC the p12 file will need to imported into the "Keychain Access" app. Example command lines: './create-client.sh firstname.lastname' and './create-client.sh someone.else'.
 
 ### Revoking a browser cert
 
